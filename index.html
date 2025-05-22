@@ -7,6 +7,32 @@
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+  <style>
+    /* Add the graph-demo CSS here so it works without separate file */
+    .graph-demo {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    .graph-demo .bar {
+      width: 40px;
+      background: linear-gradient(180deg, #667eea, #764ba2);
+      border-radius: 5px 5px 0 0;
+      cursor: default;
+      position: relative;
+    }
+
+    .graph-demo .bar[title="Training Set"] {
+      background: linear-gradient(180deg, #4a90e2, #357ABD);
+    }
+
+    .graph-demo .bar[title="Testing Set"] {
+      background: linear-gradient(180deg, #50c878, #228B22);
+    }
+  </style>
 </head>
 <body>
   <header class="hero">
@@ -53,6 +79,20 @@
         <p>Fully functional calculator using Python (CLI version).</p>
         <a href="#" class="project-link">View Project</a>
       </div>
+      <!-- Data Science Project Card -->
+      <div class="card">
+        <div class="card-icon">📊</div>
+        <h3>Telecom Customer Churn Prediction</h3>
+        <p>
+          Predicted customer churn for a telecom company using data science techniques. Data split into training & testing sets, correlation analyzed, and results visualized.
+        </p>
+        <div class="graph-demo" aria-label="Training and Testing Set Sizes">
+          <div class="bar" style="height: 80px;" title="Training Set"></div>
+          <div class="bar" style="height: 50px;" title="Testing Set"></div>
+        </div>
+        <p><small><em>Blue bar = Training set size, Green bar = Testing set size</em></small></p>
+        <a href="#" class="project-link">View Project</a>
+      </div>
     </div>
   </section>
 
@@ -77,9 +117,9 @@
       <button type="submit" class="btn">Send Message</button>
     </form>
     <div class="socials">
-      <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
-      <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
-      <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
     </div>
     <a href="#" class="btn resume-btn" download="TanviNagar_Resume.pdf">Download Resume</a>
   </section>
